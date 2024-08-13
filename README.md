@@ -35,4 +35,37 @@ O sistema de Autorização de Procedimentos é uma aplicação web que permite a
 
 * [JSP](https://docs.oracle.com/javaee/5/tutorial/doc/bnajo.html)
 * [HTTP Servlet](https://docs.oracle.com/javaee/7/api/javax/servlet/http/HttpServlet.html)
-* [tomcat](https://tomcat.apache.org/)
+* [Tomcat 9](https://tomcat.apache.org/)## Estrutura do Projeto
+
+O projeto está organizado da seguinte forma:
+
+projeto-autorizacao/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── br/
+│   │   │       └── com/
+│   │   │           └── zitrus/
+│   │   │               ├── controller/
+│   │   │               │   └── ServletAutorizacao.java
+│   │   │               ├── model/
+│   │   │               │   ├── RegraAutorizacao.java
+│   │   │               │   └── SolicitacaoAutorizacao.java
+│   │   │               ├── repository/
+│   │   │               │   ├── ImplementacaoRepositorioRegraAutorizacao.java
+│   │   │               │   └── ImplementacaoRepositorioSolicitacaoAutorizacao.java
+│   │   │               └── service/
+│   │   │                   ├── ImplementacaoServicoAutorizacao.java
+│   │   │                   └── ServicoAutorizacao.java
+│   │   └── resources/
+│   │       └── META-INF/
+│   │           └── persistence.xml
+│   └── webapp/
+│       ├── WEB-INF/
+│       │   ├── views/
+│       │   │   ├── listarRegras.jsp
+│       │   │   └── listarSolicitacoes.jsp
+│       │   └── web.xml
+│       └── solicitarAutorizacao.jsp
+├── pom.xml
+└── README.md
