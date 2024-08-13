@@ -115,7 +115,7 @@ Este projeto está sob a Isaac Nunes. Veja o arquivo [LICENSE](LICENSE) para mai
 ## **🤝 Contribuindo**
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request. 
 
-## **📄 Demonstração e instalarção do projeto - Youtube (Só clicar no vídeo)**
+## **📄 Demonstração e instalação do projeto - Youtube (Só clicar no vídeo)**
 Este projeto foi desenvolvidor por Isaac Nunes.
 
 
