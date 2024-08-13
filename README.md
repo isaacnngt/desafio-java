@@ -56,24 +56,26 @@ O sistema de Autorização de Procedimentos é uma aplicação web que permite a
    git clone https://github.com/isaacnngt/desafio-java.git
 2. Instale o JDK 17: 
    1. Baixe o [JDK](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
-   1. Siga as instruções de instalação
-2. Instale o Apache Tomcat 9: 
+   2. Siga as instruções de instalação
+3. Instale o Apache Tomcat 9: 
    1. Baixe o [Tomcat](https://tomcat.apache.org/download-90.cgi)
-   1. Descompacte o arquivo em um diretório de sua preferência
-2. Configure as variáveis de ambiente: 
+   2. Descompacte o arquivo em um diretório de sua preferência
+4. Configure as variáveis de ambiente: 
    1. JAVA\_HOME: Caminho para a pasta do JDK
-   1. CATALINA\_HOME: Caminho para a pasta do Tomcat
-   1. PATH: Adicione %JAVA\_HOME%\bin e %CATALINA\_HOME%\bin
-2. Configuração no IntelliJ IDEA: 
+   2. CATALINA\_HOME: Caminho para a pasta do Tomcat
+   3. PATH: Adicione %JAVA\_HOME%\bin e %CATALINA\_HOME%\bin
+5. Configuração no IntelliJ IDEA: 
    1. Importe o projeto
    1. Configure o Tomcat no IntelliJ
    1. Configure a conexão com o banco de dados Oracle
-2. Execute o projeto: 
+6. Execute o projeto: 
    1. Selecione a configuração do Tomcat
    1. Clique no botão "Run"
    1. Acesse a aplicação em http://localhost:8080/nome-do-seu-contexto/
+      
 ## **📄 Licença**
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está sob a Isaac Nunes. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
 ## **🤝 Contribuindo**
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma issue ou enviar um pull request.
 
