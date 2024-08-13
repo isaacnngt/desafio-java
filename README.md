@@ -28,44 +28,80 @@ O sistema de Autorização de Procedimentos é uma aplicação web que permite a
 * Listagem de todas as solicitações de autorização registradas no sistema
 ## Tecnologias utilizadas:
 
-* **Java** 
+* **Java 17** 
 * **Banco Oracle**
 * [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 * [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 
 * [JSP](https://docs.oracle.com/javaee/5/tutorial/doc/bnajo.html)
 * [HTTP Servlet](https://docs.oracle.com/javaee/7/api/javax/servlet/http/HttpServlet.html)
-* [Tomcat 9](https://tomcat.apache.org/)## Estrutura do Projeto
+* [Tomcat 9](https://tomcat.apache.org/)
+## Instruções de Instalação e Execução no IntelliJ IDEA (Windows)
 
-O projeto está organizado da seguinte forma:
 
-projeto-autorizacao/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── br/
-│   │   │       └── com/
-│   │   │           └── zitrus/
-│   │   │               ├── controller/
-│   │   │               │   └── ServletAutorizacao.java
-│   │   │               ├── model/
-│   │   │               │   ├── RegraAutorizacao.java
-│   │   │               │   └── SolicitacaoAutorizacao.java
-│   │   │               ├── repository/
-│   │   │               │   ├── ImplementacaoRepositorioRegraAutorizacao.java
-│   │   │               │   └── ImplementacaoRepositorioSolicitacaoAutorizacao.java
-│   │   │               └── service/
-│   │   │                   ├── ImplementacaoServicoAutorizacao.java
-│   │   │                   └── ServicoAutorizacao.java
-│   │   └── resources/
-│   │       └── META-INF/
-│   │           └── persistence.xml
-│   └── webapp/
-│       ├── WEB-INF/
-│       │   ├── views/
-│       │   │   ├── listarRegras.jsp
-│       │   │   └── listarSolicitacoes.jsp
-│       │   └── web.xml
-│       └── solicitarAutorizacao.jsp
-├── pom.xml
-└── README.md
+1. Faça o clone do repositório do projeto:
+
+   ```bash
+   git clone [https://github.com/isaacnngt/desafio-java.git)
+2. Instalar o Java Development Kit (JDK):
+
+* Baixe o JDK da página oficial da Oracle: https://www.oracle.com/java/technologies/javase/jdk.html
+* Siga as instruções de instalação para o seu sistema operacional.
+
+3. Instalar o Apache Tomcat:
+
+* Baixe o Tomcat da página oficial: https://tomcat.apache.org/
+* Descompacte o arquivo baixado em um diretório de sua preferência.
+
+4. Configurar as variáveis de ambiente:
+
+JAVA_HOME:
+
+* No Windows:
+    * Acesse as Propriedades do Sistema (botão direito em "Meu Computador" > Propriedades > Configurações avançadas do sistema > Variáveis de Ambiente).
+    * Na seção "Variáveis do sistema", clique em "Novo".
+    * Nome da variável: JAVA_HOME
+    * Valor da variável: Caminho para a pasta onde o JDK está instalado (ex: C:\Program Files\Java\jdk-17.0.1)
+    * Clique em "OK".
+
+CATALINA_HOME:
+
+* Similar ao JAVA_HOME, crie uma variável de sistema chamada CATALINA_HOME e defina o valor como o caminho para a pasta onde o Tomcat está instalado (ex: C:\Aplicativos\apache-tomcat-9.0.93).
+
+PATH:
+
+* Edite a variável de sistema PATH e adicione os seguintes caminhos:
+    * %JAVA_HOME%\bin (Windows)
+    * %CATALINA_HOME%\bin (Windows) ou $CATALINA_HOME/bin (Linux/macOS)
+
+5. Configuração no IntelliJ
+
+Importar o projeto:
+
+    1. Abra o IntelliJ e clique em "Open or Import".
+    2. Selecione a pasta raiz do seu projeto e clique em "OK".
+    3. Escolha "Import project from external model" e selecione "Maven".
+    4. Clique em "Next" e siga as instruções para importar o projeto.
+
+Configurar o Tomcat:
+
+    1. Vá em "Run" > "Edit Configurations".
+    2. Clique no botão "+" e selecione "Tomcat Server" > "Local".
+    3. Dê um nome à configuração (ex: "Tomcat 9.0.93").
+    4. Em "Application server", clique em "Configure" e selecione o diretório de instalação do Tomcat.
+    5. Na aba "Deployment", clique em "+" e adicione seu artefato WAR (geralmente chamado de "nome-do-projeto:war exploded").
+    6. Clique em "OK" para salvar a configuração.
+
+6. Configurar o banco de dados:
+
+    * Certifique-se de que você tem o banco de dados Oracle instalado e configurado.
+    * No IntelliJ, abra a janela "Database" (geralmente na barra lateral direita).
+    * Clique no botão "+" e selecione "Data Source" > "Oracle".Preencha os detalhes da conexão com o banco de dados (URL, usuário, senha).
+    * Clique em "Test Connection" para verificar se a conexão está funcionando.
+    * Salve a configuração.
+
+7. Executar o projeto
+
+* Selecione a configuração do Tomcat: Na barra de ferramentas superior, selecione a configuração do Tomcat que você criou (ex: "Tomcat 9.0.93").
+* Clique no botão "Run" (ícone de play verde): O IntelliJ irá construir e implantar sua aplicação no Tomcat.
+* Acesse a aplicação no navegador: Abra seu navegador e acesse a URL http://localhost:8080/nome-do-seu-contexto/ (substitua "nome-do-seu-contexto" pelo nome do contexto da sua aplicação, que você pode encontrar no arquivo web.xml ou na configuração do Tomcat).
